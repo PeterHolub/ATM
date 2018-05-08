@@ -1,0 +1,5 @@
+# Created by .ignore support plugin (hsz.mobi)
+/.idea
+/ATM.iml
+/target/
+/db/atm.trace.db
