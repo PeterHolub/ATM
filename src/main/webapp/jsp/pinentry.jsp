@@ -11,7 +11,6 @@
           type="text/css">
     <script src="${pageContext.servletContext.contextPath}/js/pinentry.js" type="text/javascript"></script>
     <title>Pin Entry</title>
-
 </head>
 
 <body onload="attachHandlers()">

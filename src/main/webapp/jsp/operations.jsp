@@ -17,12 +17,12 @@
 
 <div class="operations">
     <h4 style="color: #528ECC; text-align: center ">Choose the operation</h4>
-
-    <button onclick="location.href = '/Balance'; " class="buttonsOperations">Balance</button>
-
+    <form action="${pageContext.servletContext.contextPath}/Balance" method="post">
+        <input type="submit" value="Balance">
+    </form>
     <button onclick="location.href = '/jsp/withdrawals.jsp'; " class="buttonsOperations">RemoveSum</button>
 
-    <button onclick="location.href = 'home.jsp'; " class="buttonsOperations">Exit</button>
+    <button onclick="location.href = '/home.jsp'; " class="buttonsOperations">Exit</button>
 
 </div>
 </body>

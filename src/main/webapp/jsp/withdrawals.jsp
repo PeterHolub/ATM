@@ -61,9 +61,13 @@
             <input type="button" name="number" value="0" id="_0" class="buttons">
 
             <input type="button" name="number" value="Delete" id="CleanButton" class="buttons">
-            <button onclick="location.href = 'home.jsp'; " class="buttons" >Exit</button>
+
+            <button onclick="location.href = '/home.jsp'; " class="buttons" >Exit</button>
 
         </div>
+    </form>
+</div>
+
 </body>
 
 </html>

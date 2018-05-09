@@ -5,20 +5,17 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 
 <html lang="en">
-
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link href="${pageContext.servletContext.contextPath}/css/style.css" rel="stylesheet"
-          type="text/css">
+    <link href="${pageContext.servletContext.contextPath}/css/style.css" rel="stylesheet" type="text/css">
     <title>Balance</title>
 
 </head>
-
 <body>
 
 <div class="operations">
     <h4 style="color: #528ECC; text-align: center ">Account info:</h4>
-    <h5>Today’s date: <c:out value="${date}"/></h5>
+    <h5>Today’s date: <c:out value="${dateTime}"/></h5>
     <h5>Amount: <c:out value="${amount}"/></h5>
     <button onclick="location.href = '/jsp/operations.jsp'; " class="buttonsOperations">Back</button>
 

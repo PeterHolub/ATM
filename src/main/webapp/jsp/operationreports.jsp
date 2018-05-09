@@ -20,7 +20,7 @@
     <h4 style="color: #528ECC; text-align: center ">Operation Report</h4>
     <h5>Card Number: <c:out value="${cardNumber}"/></h5>
     <h5>Time & Date: <c:out value="${dateTime}"/></h5>
-    <h5>Amount Withdrawn: <c:out value="${amountwithdrawn}"/></h5>
+    <h5>Amount Withdrawn: <c:out value="${amountWithdrawn}"/></h5>
     <h5>Balance: <c:out value="${balance}"/></h5>
     <button onclick="location.href = '/jsp/operations.jsp'; " class="buttonsOperations">Back</button>
 

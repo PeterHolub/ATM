@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
@@ -15,7 +16,7 @@
 </head>
 
 <body onload="attachHandlers()">
-
+<c:out value="${cardNumber}"/>
 <div id="keypad" class="keybord">
     <h4 style="color: #528ECC; text-align: center ">Enter your card number</h4>
     <form action="${pageContext.servletContext.contextPath}/Home" method="post"  >

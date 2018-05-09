@@ -26,6 +26,10 @@ function inputNumbers() {
         default :
             document.getElementById("atmkeybord").value += value;
 
+            if (field.value.length > 17) {
+
+                field.value = field.value.substring(0, 17);
+            }
             document.getElementById('atmkeybord').focus();
 
             return true;
