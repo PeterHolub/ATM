@@ -18,10 +18,12 @@
 
 <div class="operations">
     <h4 style="color: #528ECC; text-align: center ">Operation Report</h4>
-    <h5>Card Number: <c:out value="${cardNumber}"/></h5>
-    <h5>Time & Date: <c:out value="${dateTime}"/></h5>
-    <h5>Amount Withdrawn: <c:out value="${amountWithdrawn}"/></h5>
-    <h5>Balance: <c:out value="${balance}"/></h5>
+    <c:forEach items="${operationsList}" var="operations">
+    <h5>Card Number: <c:out value="${operations.cardId}"/></h5>
+    <h5>Time & Date: <c:out value="${operations.dateTime}"/></h5>
+    <h5>Amount Withdrawn: <c:out value="${operations.amountWithdrawn}"/></h5>
+    <h5>Balance: <c:out value="${operations.balance}"/></h5>
+    </c:forEach>
     <button onclick="location.href = '/jsp/operations.jsp'; " class="buttonsOperations">Back</button>
 
     <button onclick="location.href = 'home.jsp'; " class="buttonsOperations">Exit</button>

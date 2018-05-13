@@ -1,9 +1,8 @@
 package atm.model;
 
-import java.io.Serializable;
 import java.util.Objects;
 
-public class Card implements Serializable {
+public class Card {
 
     private long cardNumber;
     private int pin;

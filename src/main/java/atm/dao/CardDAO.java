@@ -12,5 +12,5 @@ public interface CardDAO {
 
     double getBalance(long cardNumber);
 
-    void withdrawal(long cardNumber, double balanceUpdate);
+    void balanceUpdate(long cardNumber, double balanceUpdate);
 }

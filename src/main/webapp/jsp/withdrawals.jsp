@@ -21,7 +21,7 @@
 
         <div>
 
-            <input type="text" name="keybordvalues" style="text-align:center"  id="atmkeybord" value required="" size="22" pattern="[0-9,.]*">
+            <input type="text" name="keyboardValues" style="text-align:center"  id="atmkeybord" value required="" size="22" pattern="[0-9,.]*">
 
         </div>
 

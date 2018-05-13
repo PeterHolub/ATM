@@ -2,7 +2,6 @@ package atm.daoimpl;
 
 import atm.dao.CardDAO;
 import atm.util.DatabaseConnection;
-
 import java.sql.*;
 
 public class CardImpl implements CardDAO {
@@ -66,7 +65,7 @@ public class CardImpl implements CardDAO {
         connection = DatabaseConnection.getConnection();
         PreparedStatement statement = null;
         try {
-            statement = connection.prepareStatement("SELECT status FROM card WHERE cardnumber=(?)");
+            statement = connection.prepareStatement("SELECT cardstatus.status AS status FROM card INNER JOIN cardstatus ON card.status=cardstatus.id WHERE cardnumber=(?)");
 
             statement.setLong(1, cardNumber);
 
@@ -168,7 +167,7 @@ public class CardImpl implements CardDAO {
         connection = DatabaseConnection.getConnection();
 
         try {
-            PreparedStatement statement = connection.prepareStatement("UPDATE  card SET status ='banned'  WHERE cardnumber=(?)");
+            PreparedStatement statement = connection.prepareStatement("UPDATE  card SET status =(SELECT id FROM cardstatus WHERE status='blocked') WHERE cardnumber=(?)");
 
             statement.setLong(1, cardNumber);
 
@@ -237,7 +236,7 @@ public class CardImpl implements CardDAO {
     }
 
     @Override
-    public void withdrawal(long cardNumber, double balanceUpdate) {
+    public void balanceUpdate(long cardNumber, double balanceUpdate) {
 
         connection = DatabaseConnection.getConnection();
 
