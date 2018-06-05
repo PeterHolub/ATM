@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Error!</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" th:href="@{/style.css}" />
+</head>
+<body>
+<div class="operations">
+
+    <div th:if="${wrongCardNumber!=null}">
+        <h1 style="color: #528ECC; text-align: center " th:text="${wrongCardNumber}"></h1>
+        <button onclick="location.href = '/'; " class="buttons">Back</button>
+    </div>
+    <div th:if="${cardBlocked!=null}">
+        <h1 style="color: #528ECC; text-align: center " th:text ="${cardBlocked}"></h1>
+        <button onclick="location.href = '/'; " class="buttons">Back</button>
+    </div>
+
+    <div th:if="${pinError!=null}">
+        <h1 style="color: #528ECC; text-align: center " th:text="${pinError}"></h1>
+        <button onclick="location.href = '/pinEntry'; " class="buttons">Back</button>
+    </div>
+
+    <div th:if="${cardIsBlocked!=null}">
+        <h1 style="color: #528ECC; text-align: center " th:text ="${cardIsBlocked}"></h1>
+        <button onclick="location.href = '/'; " class="buttons">Back</button>
+    </div>
+
+    <div th:if="${amountExceed!=null}">
+        <h1 style="color: #528ECC; text-align: center " th:text ="${amountExceed}"></h1>
+        <button onclick="location.href = '/withdrawals'; " class="buttons">Back</button>
+    </div>
+</div>
+</body>
+
+</html>
