@@ -1,5 +1,9 @@
-# Created by .ignore support plugin (hsz.mobi)
-/.idea
-/ATM.iml
 /target/
-/db/atm.trace.db
+!.mvn/wrapper/maven-wrapper.jar
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+

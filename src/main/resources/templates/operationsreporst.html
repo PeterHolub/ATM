@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" th:href="@{/style.css}"/>
+    <title>Operation Report</title>
+
+</head>
+<body>
+<div class="operations">
+    <h4 style="color: #528ECC; text-align: center ">Operation Report</h4>
+
+    <div >
+        <h5>Card Number:
+            <span th:text="${Operation.getCard().getCardNumber()}"></span>
+        </h5>
+        <h5>Time & Date:
+            <span th:text="${Operation.getDateTime()}"></span>
+        </h5>
+        <h5>Amount Withdrawn:
+
+            <span th:text="${Operation.getAmountWithdrawn()}"></span>
+        </h5>
+        <h5>Balance:
+            <span th:text="${Operation.getBalance()}"></span>
+        </h5>
+    </div>
+    <button onclick="location.href = '/operations'; " class="buttonsOperations">Back</button>
+
+    <button onclick="location.href = '/'; " class="buttonsOperations">Exit</button>
+
+</div>
+</body>
+
+</html>
