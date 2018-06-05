@@ -1,2 +1,0 @@
-INSERT INTO card (balance,card_number,card_status,pin) VALUES (5000.99,1111222233334444,'NORMAL',1111);
-INSERT INTO card (balance,card_number,card_status,pin) VALUES (1000.02,5555666677778888,'BLOCKED',2222);
