@@ -22,5 +22,4 @@ public class OperationsServiceImpl implements OperationsService{
         return operationsRepository.findByDateTime(dateTime);
     }
 
-
 }

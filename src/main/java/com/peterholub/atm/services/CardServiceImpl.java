@@ -73,6 +73,7 @@ public class CardServiceImpl implements CardService {
     public void balanceUpdate(long cardNumber, double balanceUpdate) {
         Card card = cardRepository.getCardByCardNumber(cardNumber);
         card.setBalance(balanceUpdate);
+        cardRepository.save(card);
     }
 
 }
