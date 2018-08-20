@@ -1,6 +1,6 @@
 package com.peterholub.atm.controllers;
 
-import com.peterholub.atm.services.CardServiceImpl;
+import com.peterholub.atm.services.impl.CardServiceImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
