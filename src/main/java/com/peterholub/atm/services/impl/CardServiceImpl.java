@@ -1,8 +1,9 @@
-package com.peterholub.atm.services;
+package com.peterholub.atm.services.impl;
 
 import com.peterholub.atm.domains.Card;
 import com.peterholub.atm.enums.CardStatus;
 import com.peterholub.atm.repositories.CardRepository;
+import com.peterholub.atm.services.CardService;
 import org.springframework.stereotype.Service;
 
 @Service
