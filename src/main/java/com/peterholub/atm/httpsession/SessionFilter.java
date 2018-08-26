@@ -45,7 +45,9 @@ public class SessionFilter implements Filter {
         chain.doFilter(req, res);
 
         Enumeration enums = session.getAttributeNames();
+
         while (enums.hasMoreElements()) {
+
             String sessionId = session.getId();
             String attributeName = (String) enums.nextElement();
             Object attribute = session.getAttribute(attributeName);

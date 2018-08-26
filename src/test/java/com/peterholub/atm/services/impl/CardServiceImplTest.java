@@ -54,7 +54,6 @@ public class CardServiceImplTest {
         assertTrue(cardService.cardStatus(cardNumber));
     }
 
-    //TODO Show to Oleg Param test
    @Test
    @Parameters(method = "parametersToTestAdd")
    public void isPinMatch(long cardNumber, int pin, Card card, boolean expectedResult) {
@@ -66,7 +65,6 @@ public class CardServiceImplTest {
     }
 
 
-    //TODO show to Oleg argument catch and verify void
     @Test
     public void blockTheCard() {
 
@@ -94,7 +92,7 @@ public class CardServiceImplTest {
 
     }
 
-    //TODO show to Oleg argument catch and verify void
+
     @Test
 
     public void balanceUpdate() {
