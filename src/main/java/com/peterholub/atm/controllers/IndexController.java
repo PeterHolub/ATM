@@ -41,7 +41,6 @@ public class IndexController {
         }
         //writing cardNumber to session
         session.setAttribute("cardNumber", cardNumber);
-
         return "pinentry";
     }
 

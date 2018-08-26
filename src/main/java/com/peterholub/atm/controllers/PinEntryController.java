@@ -5,6 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpSession;
+
 @Controller
 public class PinEntryController {
 
@@ -17,8 +19,9 @@ public class PinEntryController {
     }
 
     @PostMapping("/pinEntry")
-    public String pinEntryPage(@SessionAttribute("cardNumber") long cardNumber, @RequestParam("keyboardValues") int pinCode, Model model) {
+    public String pinEntryPage(@SessionAttribute("cardNumber") long cardNumber, @RequestParam("keyboardValues") int pinCode, Model model,HttpSession session) {
 
+        session.setAttribute("1","2");
         if (cardService.isPinMatch(cardNumber, pinCode)) {
 
             return "operations";
@@ -37,8 +40,8 @@ public class PinEntryController {
     }
 
     @GetMapping("/pinEntry")
-    public String pinEntry(){
-
+    public String pinEntry(HttpSession session){
+        session.setAttribute("1","2");
         return"pinentry";
     }
 

@@ -8,6 +8,8 @@ import org.junit.*;
 import org.junit.runner.RunWith;
 import org.mockito.*;
 import org.mockito.junit.MockitoJUnitRunner;
+import org.springframework.test.util.ReflectionTestUtils;
+
 import java.time.LocalDateTime;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
@@ -59,9 +61,15 @@ public class OperationsServiceImplTest {
 
     @Test
     public void findByDateTime() {
-//
+
         Mockito.when(operationsRepository.findByDateTime(localDateTime)).thenReturn(operation);
 
         assertEquals(operation, operationsService.findByDateTime(localDateTime));
+    }
+
+    @Test
+    public void mathMethodTest() {
+
+        assertEquals(8,(int)ReflectionTestUtils.invokeMethod(operationsService,"mathMethod",4,4));
     }
 }

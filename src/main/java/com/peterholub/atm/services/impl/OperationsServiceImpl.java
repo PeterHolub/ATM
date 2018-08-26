@@ -23,4 +23,9 @@ public class OperationsServiceImpl implements OperationsService {
         return operationsRepository.findByDateTime(dateTime);
     }
 
+
+    private Integer mathMethod (Integer a, Integer b){
+
+        return a+b;
+    }
 }

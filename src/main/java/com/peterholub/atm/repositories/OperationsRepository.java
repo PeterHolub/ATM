@@ -6,9 +6,7 @@ import org.springframework.data.repository.CrudRepository;
 import java.time.LocalDateTime;
 
 public interface OperationsRepository extends CrudRepository<Operations, Long> {
-    @Override
-    <S extends Operations> S save(S s);
 
-   Operations findByDateTime(LocalDateTime dateTime);
+    Operations findByDateTime(LocalDateTime dateTime);
 
 }
