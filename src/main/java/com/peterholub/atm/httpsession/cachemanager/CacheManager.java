@@ -32,7 +32,7 @@ public interface CacheManager {
      * @param sessionId     - id of session
      * @param attributeName - attribute name to get from storage
      */
-    Optional get(String sessionId, String attributeName);
+    Object get(String sessionId, String attributeName);
 
     /**
      * Removing value by session id & attribute name

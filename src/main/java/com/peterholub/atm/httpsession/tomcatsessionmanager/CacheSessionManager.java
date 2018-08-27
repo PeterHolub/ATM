@@ -25,7 +25,6 @@ public class CacheSessionManager extends StandardManager {
         return new CacheSession(this);
     }
 
-
 }
 
 

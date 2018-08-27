@@ -1,17 +1,20 @@
 package com.peterholub.atm.httpsession.tomcatsessionmanager;
 
-import org.junit.After;
-import org.junit.Before;
-
+import org.junit.*;
 import static org.junit.Assert.*;
 
 public class CacheSessionManagerTest {
 
-    @Before
-    public void setUp() throws Exception {
-    }
+    private CacheSessionManager cacheSessionManager;
 
-    @After
-    public void tearDown() throws Exception {
+    @Before
+    public void setUp() {
+
+        cacheSessionManager = new CacheSessionManager(); }
+
+        @Test
+    public void getNewSession() {
+
+        assertTrue(cacheSessionManager.getNewSession() instanceof CacheSession);
     }
 }

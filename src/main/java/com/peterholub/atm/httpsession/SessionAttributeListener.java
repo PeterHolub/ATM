@@ -16,7 +16,6 @@ import javax.servlet.http.*;
  * </listener>
  */
 
-
 public class SessionAttributeListener implements HttpSessionAttributeListener {
 
     private CacheManager cacheManager;
@@ -47,7 +46,6 @@ public class SessionAttributeListener implements HttpSessionAttributeListener {
     public void attributeRemoved(HttpSessionBindingEvent httpSessionBindingEvent) {
         String sessionId = httpSessionBindingEvent.getSession().getId();
         String attributeName = httpSessionBindingEvent.getName();
-
         cacheManager.remove(sessionId, attributeName);
     }
 
